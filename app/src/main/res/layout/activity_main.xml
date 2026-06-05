@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album Panini Mundial 2026"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"/>
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registrar lámina"/>
+
+    <Button
+        android:id="@+id/btnObtenidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver obtenidas"/>
+
+    <Button
+        android:id="@+id/btnPendientes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver pendientes"/>
+
+    <Button
+        android:id="@+id/btnRepetidas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver repetidas"/>
+
+    <Button
+        android:id="@+id/btnIntercambiar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Intercambiar lámina"/>
+
+    <Button
+        android:id="@+id/btnBuscarJugador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buscar jugador"/>
+
+</LinearLayout>
