@@ -24,6 +24,8 @@ class IntercambiarActivity : AppCompatActivity() {
         val btnIntercambiar =
             findViewById<Button>(R.id.btnIntercambiar)
 
+        val dbHelper = DatabaseHelper(this)
+
         btnIntercambiar.setOnClickListener {
 
             val numeroEntregado =
@@ -36,9 +38,9 @@ class IntercambiarActivity : AppCompatActivity() {
                 etNombre.text.toString()
 
             val laminaEntregada =
-                RepositorioLaminas.laminas.find {
-                    it.numero == numeroEntregado
-                }
+                dbHelper.buscarLaminaPorNumero(
+                    numeroEntregado
+                )
 
             if (laminaEntregada == null ||
                 laminaEntregada.repetidas <= 0) {
@@ -54,14 +56,19 @@ class IntercambiarActivity : AppCompatActivity() {
 
             laminaEntregada.repetidas--
 
+            dbHelper.actualizarRepetidas(
+                laminaEntregada.numero,
+                laminaEntregada.repetidas
+            )
+
             val existente =
-                RepositorioLaminas.laminas.find {
-                    it.numero == numeroRecibido
-                }
+                dbHelper.buscarLaminaPorNumero(
+                    numeroRecibido
+                )
 
             if (existente == null) {
 
-                RepositorioLaminas.laminas.add(
+                dbHelper.insertarLamina(
                     Lamina(
                         numeroRecibido,
                         nombreRecibido,

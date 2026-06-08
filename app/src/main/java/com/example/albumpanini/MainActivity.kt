@@ -17,46 +17,6 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val dbHelper = DatabaseHelper(this)
-
-        val encontrada =
-            dbHelper.buscarLaminaPorNumero(999)
-
-        Log.d(
-            "SQLITE",
-            "Encontrada: $encontrada"
-        )
-
-        val laminas = dbHelper.obtenerTodasLasLaminas()
-
-
-
-        Log.d(
-            "SQLITE",
-            "Laminas encontradas: $laminas"
-        )
-
-        val prueba = Lamina(
-            1000,
-            "Prueba2",
-            true,
-            0
-        )
-
-        val guardado =
-            dbHelper.insertarLamina(prueba)
-
-        Log.d(
-            "SQLITE",
-            "Guardado = $guardado"
-        )
-        dbHelper.writableDatabase
-
-
-
-        for (lamina in laminas) {
-            Log.d("LAMINAS", lamina.toString())
-        }
 
         val btnRegistrar = findViewById<Button>(R.id.btnRegistrar)
 

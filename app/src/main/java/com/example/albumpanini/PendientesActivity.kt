@@ -36,7 +36,8 @@ class PendientesActivity : AppCompatActivity() {
 
         val adapter = ArrayAdapter(
             this,
-            android.R.layout.simple_list_item_1,
+            R.layout.item_lamina,
+            R.id.tvLamina,
             listaPendientes
         )
 

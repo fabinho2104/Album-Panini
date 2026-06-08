@@ -1,53 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/fondo_panini">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Album Panini Mundial 2026"
-        android:textSize="24sp"
-        android:layout_marginBottom="20dp"/>
-
-    <Button
-        android:id="@+id/btnRegistrar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Registrar lámina"/>
+        android:orientation="vertical"
+        android:padding="20dp">
 
-    <Button
-        android:id="@+id/btnObtenidas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver obtenidas"/>
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⚽ Álbum Panini Mundial 2026"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:padding="10dp"
+            android:background="#66000000"
+            android:shadowColor="#000000"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="4"
+            android:layout_marginBottom="20dp" />
 
-    <Button
-        android:id="@+id/btnPendientes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver pendientes"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegistrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Registrar lámina"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/btnRepetidas"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver repetidas"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnObtenidas"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ver obtenidas"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/btnIntercambiar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Intercambiar lámina"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPendientes"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ver pendientes"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="10dp"/>
 
-    <Button
-        android:id="@+id/btnBuscarJugador"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Buscar jugador"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRepetidas"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Ver repetidas"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="10dp"/>
 
-</LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnIntercambiar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Intercambiar lámina"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"
+            android:layout_marginBottom="10dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBuscarJugador"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Buscar jugador"
+            android:textColor="#000000"
+            app:backgroundTint="#FFFFFF"
+            app:strokeColor="#000000"
+            app:strokeWidth="3dp"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="50dp" />
+
+        <ImageView
+            android:id="@+id/imgPanini"
+            android:layout_width="1440dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:src="@drawable/panini_logo"
+            android:contentDescription="Logo Panini"
+            android:adjustViewBounds="true" />
+
+    </LinearLayout>
+
+</ScrollView>

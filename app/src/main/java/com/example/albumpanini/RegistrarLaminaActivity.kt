@@ -72,7 +72,7 @@ class RegistrarLaminaActivity : AppCompatActivity() {
 
                     Toast.makeText(
                         this,
-                        "Lámina guardada en SQLite",
+                        "Lámina guardada",
                         Toast.LENGTH_SHORT
                     ).show()
 
